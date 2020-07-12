@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import "./App.css";
 import Header from "./Header";
+import Sidebar from "./Sidebar";
 // import User from "./components/User";
 // import SearchParams from "./components/SearchParams"
-import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 
 class App extends Component {
   constructor(props) {
@@ -19,6 +20,7 @@ class App extends Component {
             <Route exact path="/">
               <div className="main-logo">
                 <h1>Home Page</h1>
+                <Sidebar />
               </div>
             </Route>
             <Route path="/sign_in">
