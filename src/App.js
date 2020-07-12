@@ -1,26 +1,61 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import MainNav from './MainNav';
+// import JobListing from "./components/jobListing";
+// import User from "./components/User";
+// import SearchParams from "./components/SearchParams"
+import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <h1 className="App-title">Application Station: Your Search Stops Here!</h1>
+        </header>
+        <Router>
+          <MainNav />
+          <Switch>
+            <Route exact path="/">
+              <div className="main-logo">
+                <h1>Home Page</h1>
+              </div>
+            </Route>
+            <Route path="/sign_in">
+              <div className="logo">
+                <h1>Sign-in form</h1>
+              </div>
+            </Route>
+            <Route path="/dashboard">
+              <div className="logo">
+                <h1>Dashboard</h1>
+              </div>
+            </Route>
+            <Route path="/search_form">
+              <div className="logo">
+                <h1>Job search form</h1>
+              </div>
+            </Route>
+            <Route path="/search_results">
+              <div className="logo">
+                <h1>Search results</h1>
+              </div>
+            </Route>
+            <Route path="/users">
+              <div className="logo">
+                <h1>Hello Users</h1>
+              </div>
+            </Route>
+
+          </Switch>
+        </Router>
+      </div>
+    );
+  }
 }
 
 export default App;
