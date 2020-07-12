@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import MainNav from './MainNav';
-// import JobListing from "./components/jobListing";
+import Header from "./Header";
 // import User from "./components/User";
 // import SearchParams from "./components/SearchParams"
 import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -14,11 +13,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Application Station: Your Search Stops Here!</h1>
-        </header>
         <Router>
-          <MainNav />
+          <Header />
           <Switch>
             <Route exact path="/">
               <div className="main-logo">
