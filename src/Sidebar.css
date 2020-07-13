@@ -31,13 +31,13 @@
     height: 210px;
   }
   
-  @media (min-width: 600px) {
+  /* @media (min-width: 600px) {
     .sidebar-container {
       width: 200px;
     }
   
     .sidebar-pics-container {
       display: unset;
-    }
-  }
-  
+    } */
+  /* }
+   */

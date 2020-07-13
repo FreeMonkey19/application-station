@@ -22,11 +22,11 @@ export class MainNav extends Component {
             Dashboard
           </NavLink>
         </span>
-        <span className="nav-link-container" title="main-nav-link">
+        {/* <span className="nav-link-container" title="main-nav-link">
           <NavLink className="nav-link" to="/search_form">
             Job Search Form
           </NavLink>
-        </span>
+        </span> */}
         <span className="nav-link-container" title="main-nav-link">
           <NavLink className="nav-link" to="/search_results">
             Search Results
