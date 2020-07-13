@@ -43,7 +43,7 @@ class App extends Component {
             </Route> */}
             <Route path="/search_results">
               <div className="logo">
-                <h1>Search results</h1>
+                <h1>All Search results</h1>
                 <Job />
               </div>
             </Route>

@@ -4,6 +4,10 @@
     background-color: whitesmoke;
     margin-bottom: 10px;
   }
+
+  .move-right {
+    float: right;
+  }
   
   .nav-link-container {
     padding-right: 10px;
@@ -11,6 +15,8 @@
     border-right: solid black 1px;
     display: inline-block;
   }
+
+ 
   
   .nav-link-container:last-of-type {
     padding-right: 0;
