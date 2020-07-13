@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Header from "./Header";
+import Job from './Job';
 import Sidebar from "./Sidebar";
 import User from "./User";
 import SearchForm from "./SearchForm"
@@ -42,6 +43,7 @@ class App extends Component {
             <Route path="/search_results">
               <div className="logo">
                 <h1>Search results</h1>
+                <Job />
               </div>
             </Route>
             <Route path="/users">

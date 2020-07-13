@@ -1,8 +1,8 @@
-import React, { useState} from 'react';
-import Job from './Job';
-import SearchDetail from './SearchDetail';
+import React, { useState } from 'react';
+// import Job from './Job';
+// import SearchDetail from './SearchDetail';
 import './SearchForm.css'
-// not sure about this url to call flask api and get listings from github
+// before deployment fix proxy to 5000
 const BASE_URL = 'http://localhost:5000/job_listings?';
 const axios = require('axios');
 
@@ -23,16 +23,16 @@ const SearchForm = () => {
   };
   
   // show job search details 
-  const [searchDetail, setSearchDetail] = useState([]);
+  // const [searchDetail, setSearchDetail] = useState([]);
 
-  const onClickDetails = (job) => {
-    setSearchDetail(job);
+  // const onClickDetails = (job) => {
+  //   setSearchDetail(job);
 
-  }
+  // }
 
-  const generateSearches = searchResult.map((search) => {
-    return <Job key={search.id} job={search} onClickCallBack={onClickDetails} />
-  })
+  // const generateSearches = searchResult.map((search) => {
+  //   return <Job key={search.id} job={search} onClickCallBack={onClickDetails} />
+  // })
 
   return (<div className="search-form-container">
     <div className="search-params">
@@ -45,9 +45,9 @@ const SearchForm = () => {
             placeholder="Location"
             onChange={event => setLocation(event.target.value)}
             onBlur={event => setLocation(event.target.value)}>
-            <option>Seattle, WA</option>
-            <option>Portland, OR</option>
-            <option>San Francisco, CA</option>
+            <option>Seattle</option>
+            <option>Portland</option>
+            <option>San Francisco</option>
 
           </select>
         </label>
@@ -70,11 +70,11 @@ const SearchForm = () => {
 
       </form>
     </div>
-    {searchResult}
+     {/* {searchResult} */}
 
-    {generateSearches}
+    {/* {generateSearches} */}
 
-    <SearchDetail job={searchDetail} />
+    {/* <SearchDetail job={searchDetail} />  */}
   </div>
   )
 }
