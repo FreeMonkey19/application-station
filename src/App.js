@@ -20,7 +20,9 @@ class App extends Component {
           <Switch>
             <Route exact path="/">
               <div className="main-logo">
-                <h1>Home Page</h1>
+                <h1 className="home-page-title">Your Career Begins Here!</h1>
+                <SearchForm />
+
                 <Sidebar />
               </div>
             </Route>
@@ -34,12 +36,11 @@ class App extends Component {
                 <h1>Dashboard</h1>
               </div>
             </Route>
-            <Route path="/search_form">
+            {/* <Route path="/search_form">
               <div className="logo">
 
-                <SearchForm />
               </div>
-            </Route>
+            </Route> */}
             <Route path="/search_results">
               <div className="logo">
                 <h1>Search results</h1>

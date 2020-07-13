@@ -21,7 +21,9 @@ const SearchForm = () => {
       });
 
   };
-  
+
+  console.log(searchResult)
+
   // show job search details 
   // const [searchDetail, setSearchDetail] = useState([]);
 
@@ -34,48 +36,45 @@ const SearchForm = () => {
   //   return <Job key={search.id} job={search} onClickCallBack={onClickDetails} />
   // })
 
-  return (<div className="search-form-container">
-    <div className="search-params">
-      <form onSubmit={onSubmit}>
-        <label htmlFor="location">
-          Location
+  return (
+      <div className="search-params">
+        <form onSubmit={onSubmit}>
+          <label htmlFor="location">
+            Location
         <select
-            id='location'
-            value={location}
-            placeholder="Location"
-            onChange={event => setLocation(event.target.value)}
-            onBlur={event => setLocation(event.target.value)}>
-            <option>Seattle</option>
-            <option>Portland</option>
-            <option>San Francisco</option>
+              id='location'
+              value={location}
+              placeholder="Location"
+              onChange={event => setLocation(event.target.value)}
+              onBlur={event => setLocation(event.target.value)}>
+              <option>Seattle</option>
+              <option>Portland</option>
+              <option>San Francisco</option>
 
-          </select>
-        </label>
-        <label htmlFor="description">
-          description
+            </select>
+          </label>
+          <label htmlFor="description">
+            description
         <select
-            id="description"
-            value={description}
-            placeholder="Description"
-            onChange={event => setDescription(event.target.value)}
-            onBlur={event => setDescription(event.target.value)}>
-            <option>Python</option>
-            <option>Javascript</option>
-            <option>React</option>
-            <option>Ruby on Rails</option>
-          </select>
+              id="description"
+              value={description}
+              placeholder="Description"
+              onChange={event => setDescription(event.target.value)}
+              onBlur={event => setDescription(event.target.value)}>
+              <option>Python</option>
+              <option>Javascript</option>
+              <option>React</option>
+              <option>Ruby on Rails</option>
+            </select>
 
-        </label>
-        <button>Submit</button>
+          </label>
+          <button>Submit</button>
 
-      </form>
-    </div>
-     {/* {searchResult} */}
+        </form>
+      </div>
 
-    {/* {generateSearches} */}
 
-    {/* <SearchDetail job={searchDetail} />  */}
-  </div>
+    
   )
 }
 
