@@ -9,7 +9,7 @@ export class Sidebar extends Component {
         <div className="sidebar-wrapper">
           <div className="sidebar-quote-container">
             <p className="sidebar-quote">
-              "Let no man tell you - you cannot do something. Instead, be that something and pay it forward!"
+              "Great careers lead to great vacations!"
             </p>
             <p className="quote-author">-Author Unknown</p>
           </div>

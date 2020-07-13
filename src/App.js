@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import "./App.css";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
-// import User from "./components/User";
-// import SearchParams from "./components/SearchParams"
+import User from "./User";
+import SearchForm from "./SearchForm"
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 
 class App extends Component {
@@ -35,7 +35,8 @@ class App extends Component {
             </Route>
             <Route path="/search_form">
               <div className="logo">
-                <h1>Job search form</h1>
+
+                <SearchForm />
               </div>
             </Route>
             <Route path="/search_results">
@@ -46,6 +47,7 @@ class App extends Component {
             <Route path="/users">
               <div className="logo">
                 <h1>Hello Users</h1>
+                <User />
               </div>
             </Route>
 
