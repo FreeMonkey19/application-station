@@ -1,9 +1,21 @@
 {
     "extends": [
+        "eslint:recommended",
+        "plugin:import/errors",
+        "plugin:react/recommended",
+        "plugin:jsc-ally/recommended",
         "prettier",
         "prettier/react"
     ],
-    "plugins": [
-        "prettier"
-    ]
+
+    "rules": {
+        "react/prop-types": 0,
+        "no-console": 1,
+        "react-hooks/rules-of-hooks": 2,
+        "react-hooks/exhaustive-deps": 1 
+    },
+
+    "plugins": ["react", "import", "jsx-ally", "react-hooks"],
+    
+
 }
