@@ -30,7 +30,7 @@ export default class Registration extends Component {
     axios
       .post(
         // call flask
-        "http://localhost:5000/api/v1/users/registrations",
+        "http://localhost:5000/api/users/registrations",
         {
           user: {
             name: name,

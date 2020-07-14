@@ -5,7 +5,7 @@ import { UserList } from "./UserList";
 function User() {
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    fetch("/users").then((response) =>
+    fetch("/api/users").then((response) =>
       response.json().then((data) => {
         setUsers(data.users);
       })
