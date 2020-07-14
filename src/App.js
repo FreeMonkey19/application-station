@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import "./App.css";
 import Header from "./Header";
-import Job from './Job';
+import Job from "./Job";
 import Sidebar from "./Sidebar";
 import User from "./User";
-import SearchForm from "./SearchForm"
+import SearchForm from "./SearchForm";
+import Home from "./Home";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 
 class App extends Component {
@@ -20,17 +21,23 @@ class App extends Component {
           <Switch>
             <Route exact path="/">
               <div className="main-logo">
-                <h1 className="home-page-title">Your Career Begins Here!</h1>
-                <SearchForm />
-
-                <Sidebar />
+                <h1 className="home-page-title">Home Page from App</h1>
+                <Home />
               </div>
             </Route>
-            <Route path="/sign_in">
+            <Route path="/login">
               <div className="logo">
                 <h1>Sign-in form</h1>
               </div>
             </Route>
+            <Route path="/logged">
+              <div className="logo">
+                <h1>If you are here you are logged in. </h1>
+                <SearchForm />
+                <Sidebar />
+              </div>
+            </Route>
+           
             <Route path="/dashboard">
               <div className="logo">
                 <h1>Dashboard</h1>
@@ -48,7 +55,6 @@ class App extends Component {
                 <User />
               </div>
             </Route>
-
           </Switch>
         </Router>
       </div>
