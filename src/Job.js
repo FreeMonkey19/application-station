@@ -5,7 +5,7 @@ import { JobList } from "./JobList";
 function Job() {
   const [jobs, setJobs] = useState([]);
   useEffect(() => {
-    fetch("/job_listings").then((response) =>
+    fetch("/api/job_listings").then((response) =>
       response.json().then((data) => {
         setJobs(data.jobs);
       })
