@@ -5,7 +5,6 @@ export const JobList = ({ jobs }) => {
   return (
     <div>
       {jobs.map((job) => {
-        // console.log(job.external_id);
         return (
           <Card key={job.id} className="card">
             <Card.Content heading={"Job Listing"}>
