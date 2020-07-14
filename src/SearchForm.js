@@ -22,6 +22,7 @@ const SearchForm = () => {
 
   };
 
+  // put this is curly brackets at the bottom of page?
   console.log(searchResult)
 
   // show job search details 
