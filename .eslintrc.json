@@ -1,21 +1,23 @@
 {
-    "extends": [
-        "eslint:recommended",
-        "plugin:import/errors",
-        "plugin:react/recommended",
-        "plugin:jsc-ally/recommended",
-        "prettier",
-        "prettier/react"
-    ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:react/recommended",
+    "plugin:jsc-ally/recommended",
+    "prettier/flowtype",
+    "prettier/react",
+    "prettier/standard",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
 
-    "rules": {
-        "react/prop-types": 0,
-        "no-console": 1,
-        "react-hooks/rules-of-hooks": 2,
-        "react-hooks/exhaustive-deps": 1 
-    },
+  "plugins": ["prettier", "react", "import", "jsx-ally", "react-hooks"],
 
-    "plugins": ["react", "import", "jsx-ally", "react-hooks"],
-    
-
+  "rules": {
+    "react/prop-types": 0,
+    "no-console": 1,
+    "react-hooks/rules-of-hooks": 2,
+    "react-hooks/exhaustive-deps": 1,
+    "prettier/prettier": "error"
+  }
 }
