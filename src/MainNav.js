@@ -12,8 +12,8 @@ export class MainNav extends Component {
           </NavLink>
         </span>
         <span className="nav-link-container move-right" title="main-nav-link">
-          <NavLink className="nav-link" to="/sign_in">
-            Sign In
+          <NavLink className="nav-link" to="/login">
+            Login
           </NavLink>
         </span>
         <span className="nav-link-container" title="main-nav-link">

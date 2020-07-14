@@ -36,11 +36,6 @@ class App extends Component {
                 <h1>Dashboard</h1>
               </div>
             </Route>
-            {/* <Route path="/search_form">
-              <div className="logo">
-
-              </div>
-            </Route> */}
             <Route path="/search_results">
               <div className="logo">
                 <h1>All Search results</h1>
