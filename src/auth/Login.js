@@ -29,7 +29,7 @@ export default class Login extends Component {
     axios
       .post(
         // call flask
-        "http://localhost:5000/sessions",
+        "http://localhost:5000//logged_in",
         {
           user: {
             // name: name,

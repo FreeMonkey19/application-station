@@ -7,9 +7,14 @@ import User from "./User";
 import SearchForm from "./SearchForm";
 import Home from "./Home";
 import Dashboard from "./Dashboard";
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  HashRouter as Router,
+  // Redirect,
+  Switch,
+  Route,
+} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import axios from 'axios';
+import axios from "axios";
 
 class App extends Component {
   constructor(props) {
@@ -26,7 +31,7 @@ class App extends Component {
 
   checkLoginStatus() {
     axios
-      .get("/auth/logged_in")
+      .get("/api/logged_in")
       .then((response) => {
         if (
           response.data.logged_in &&
@@ -78,6 +83,7 @@ class App extends Component {
             <Route
               exact
               path={"/"}
+              // render={props} gives us all the props of React Router and allows us to add more
               render={(props) => (
                 <Home
                   {...props}
