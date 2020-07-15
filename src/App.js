@@ -7,6 +7,7 @@ import User from "./User";
 import SearchForm from "./SearchForm";
 import Home from "./Home";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
   constructor(props) {
