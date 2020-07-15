@@ -31,8 +31,12 @@ class App extends Component {
 
   checkLoginStatus() {
     axios
-      .get("/api/logged_in")
+      .get("/api/users")
       .then((response) => {
+        console.log("this is the response")
+
+        console.log(response)
+
         if (
           response.data.logged_in &&
           this.state.loggedInStatus === "NOT_LOGGED_IN"
