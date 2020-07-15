@@ -6,7 +6,7 @@ export default class Login extends Component {
     super(props);
 
     this.state = {
-    //   name: "",
+      //   name: "",
       email: "",
       password: "",
       loginErrors: "",
@@ -40,8 +40,9 @@ export default class Login extends Component {
         }
       )
       .then((response) => {
-        // is user logged in?
-        console.log("login response", response);
+        if (response.data.logged_in) {
+          this.props.handleSuccessfulAuth(response.data);
+        }
       })
       .catch((error) => {
         console.log("login error", error);
@@ -54,39 +55,23 @@ export default class Login extends Component {
       <div>
         <form onSubmit={this.handleSumbit}>
           <input
-            type="name"
-            name="name"
-            placeholder="Name"
-            value={this.state.name}
-            onChange={this.handleChange}
-            required
-          ></input>
-          {/* <input
             type="email"
             name="email"
             placeholder="Email"
             value={this.state.email}
             onChange={this.handleChange}
             required
-          ></input> */}
-          {/* <input
+          ></input>
+          <input
             type="password"
             name="password"
             placeholder="Password"
             value={this.state.password}
             onChange={this.handleChange}
             required
-          ></input> */}
-          {/* <input
-            type="password_confirmation"
-            name="password_confirmation"
-            placeholder="Password_confirmation"
-            value={this.state.password_confirmation}
-            onChange={this.handleChange}
-            required
-          ></input> */}
+          ></input>
 
-          <button type="submit">Register</button>
+          <button type="submit">Login</button>
         </form>
       </div>
     );
