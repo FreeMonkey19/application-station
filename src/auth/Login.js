@@ -29,10 +29,10 @@ export default class Login extends Component {
     axios
       .post(
         // call flask
-        "http://localhost:5000/api/users/logged_in",
+        "http://localhost:5000/api/users/login",
         {
           user: {
-            // name: name,
+            // name: name
             email: email,
             password: password,
             // password_confirmation: password_confirmation,
@@ -41,7 +41,10 @@ export default class Login extends Component {
       )
       .then((response) => {
         if (response.data.logged_in) {
-          this.props.handleSuccessfulAuth(response.data);
+          if (response.data.status === "created") {
+            console.log("you got here");
+          }
+          //   this.props.handleSuccessfulAuth(response.data);
         }
       })
       .catch((error) => {

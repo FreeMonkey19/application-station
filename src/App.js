@@ -35,6 +35,8 @@ class App extends Component {
       .then((response) => {
         console.log("this is the response")
 
+        console.log("this is line 38 app.js")
+
         console.log(response)
 
         if (
