@@ -1,12 +1,14 @@
-import React from 'react';
+import React from "react";
 
-const Dashboard = () => {
-    return (
-        <div>
-            <h1>Dashboard Component</h1>
-        </div>
-
-    )
-}
+const Dashboard = (props) => {
+  return (
+    <div>
+      <div>
+        <h1>Dashboard Component</h1>
+        <h1>Status: {props.loggedInStatus}</h1>
+      </div>
+    </div>
+  );
+};
 
 export default Dashboard;

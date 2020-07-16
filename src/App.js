@@ -6,25 +6,101 @@ import Sidebar from "./Sidebar";
 import User from "./User";
 import SearchForm from "./SearchForm";
 import Home from "./Home";
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import Dashboard from "./Dashboard";
+import {
+  HashRouter as Router,
+  // Redirect,
+  Switch,
+  Route,
+} from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import axios from "axios";
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+
+    this.state = {
+      loggedInStatus: "NOT_LOGGED_IN",
+      user: {},
+    };
+
+    this.handleLogin = this.handleLogin.bind(this);
+    this.handleLogout = this.handleLogout.bind(this);
   }
+
+  checkLoginStatus() {
+    axios
+      .get("/api/users")
+      .then((response) => {
+        console.log("this is the response");
+
+        console.log("this is line 38 app.js");
+
+        console.log("check login status response");
+        console.log(response);
+
+        if (
+          response.data.logged_in &&
+          this.state.loggedInStatus === "NOT_LOGGED_IN"
+        ) {
+          this.setState({
+            loggedInStatus: "LOGGED_IN",
+            user: response.data.user,
+          });
+        } else if (
+          !response.data.logged_in &
+          (this.state.loggedInStatus === "LOGGED_IN")
+        ) {
+          this.setState({
+            loggedInStatus: "NOT_LOGGED_IN",
+            user: {},
+          });
+        }
+      })
+      .catch((error) => {
+        console.log("check login error", error);
+      });
+  }
+
+  componentDidMount() {
+    this.checkLoginStatus();
+  }
+
+  handleLogout() {
+    this.setState({
+      loggedInStatus: "NOT_LOGGED_IN",
+      user: {},
+    });
+  }
+  // this is also in Home
+  handleLogin(data) {
+    this.setState({
+      loggedInStatus: "LOGGED_IN",
+      user: data.user,
+    });
+  }
+
   render() {
     return (
       <div className="App">
         <Router>
           <Header />
           <Switch>
-            <Route exact path="/">
-              <div className="main-logo">
-                <h1 className="home-page-title">Home Page from App</h1>
-                <Home />
-              </div>
-            </Route>
+            <Route
+              exact
+              path={"/"}
+              // render={props} gives us all the props of React Router and allows us to add more
+              render={(props) => (
+                <Home
+                  {...props}
+                  handleLogin={this.handleLogin}
+                  handleLogout={this.handleLogout}
+                  loggedInStatus={this.state.loggedInStatus}
+                />
+              )}
+            />
+
             <Route path="/login">
               <div className="logo">
                 <h1>Sign-in form</h1>
@@ -37,12 +113,17 @@ class App extends Component {
                 <Sidebar />
               </div>
             </Route>
-           
-            <Route path="/dashboard">
-              <div className="logo">
-                <h1>Dashboard</h1>
-              </div>
-            </Route>
+            <Route
+              exact
+              path={"/dashboard"}
+              render={(props) => (
+                <Dashboard
+                  {...props}
+                  loggedInStatus={this.state.loggedInStatus}
+                />
+              )}
+            />
+
             <Route path="/search_results">
               <div className="logo">
                 <h1>All Search results</h1>

@@ -1,18 +1,21 @@
 import React from "react";
-import { List, Header } from "semantic-ui-react";
 
 export const UserList = ({ users }) => {
-	return (
-		<List>
-			{users.map(user => {
-				return (
-					<List.Item key={user.name}>
-						<Header>{user.name}</Header>
-					</List.Item>
-				)
-			})}
-		</List>
-	)
+  return (
+    <div>
+      {users.map((user) => {
+        return (
+          <div key={user.id}>
+            <ul>
+              <li>
+                <h2>{user.name}</h2>
+              </li>
+            </ul>
+          </div>
+        );
+      })}
+    </div>
+  );
 };
 
 export default UserList;
