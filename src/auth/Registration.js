@@ -40,7 +40,9 @@ export default class Registration extends Component {
       .then((response) => {
         console.log("this is the response");
         console.log(response);
-        if (response.data.status === "created") {
+        console.log(response.data.status)
+        if (response.status === 201) {
+          console.log('in registration, status is created');
           this.props.handleSuccessfulAuth(response.data);
         }
       })
