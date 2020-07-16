@@ -5,11 +5,13 @@ export const UserList = ({ users }) => {
     <div>
       {users.map((user) => {
         return (
-          <ul>
-            <li key={user.id}>
-              <h2>{user.name}</h2>
-            </li>
-          </ul>
+          <div key={user.id}>
+            <ul>
+              <li>
+                <h2>{user.name}</h2>
+              </li>
+            </ul>
+          </div>
         );
       })}
     </div>

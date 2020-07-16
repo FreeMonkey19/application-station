@@ -6,7 +6,6 @@ export default class Login extends Component {
     super(props);
 
     this.state = {
-      //   name: "",
       email: "",
       password: "",
       loginErrors: "",
@@ -24,7 +23,6 @@ export default class Login extends Component {
 
   handleSumbit(event) {
     const { email, password } = this.state;
-    // email, password, password_confirmation,
 
     axios
       .post(
@@ -32,19 +30,18 @@ export default class Login extends Component {
         "http://localhost:5000/api/users/login",
         {
           user: {
-            // name: name
             email: email,
             password: password,
-            // password_confirmation: password_confirmation,
           },
         }
       )
       .then((response) => {
+          console.log("from login", response);
         if (response.data.logged_in) {
           if (response.data.status === "created") {
             console.log("you got here");
           }
-          //   this.props.handleSuccessfulAuth(response.data);
+            this.props.handleSuccessfulAuth(response.data);
         }
       })
       .catch((error) => {

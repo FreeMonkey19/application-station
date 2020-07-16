@@ -18,7 +18,10 @@ export default class Home extends Component {
 
   handleSuccessfulAuth(data) {
     //   update parent component with render props
+    // handleLogin is in App
     this.props.handleLogin(data);
+    console.log('this is the date')
+    console.log(data)
 
     // redirect user - Home is defined inside a route. 
     // we have access to .history via Router props in App.js where we render Home.

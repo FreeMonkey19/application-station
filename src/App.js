@@ -33,11 +33,12 @@ class App extends Component {
     axios
       .get("/api/users")
       .then((response) => {
-        console.log("this is the response")
+        console.log("this is the response");
 
-        console.log("this is line 38 app.js")
+        console.log("this is line 38 app.js");
 
-        console.log(response)
+        console.log("check login status response");
+        console.log(response);
 
         if (
           response.data.logged_in &&
@@ -72,7 +73,7 @@ class App extends Component {
       user: {},
     });
   }
-
+  // this is also in Home
   handleLogin(data) {
     this.setState({
       loggedInStatus: "LOGGED_IN",

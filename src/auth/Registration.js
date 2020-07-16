@@ -13,54 +13,55 @@ export default class Registration extends Component {
       registrationErrors: "",
     };
 
-    this.handleSumbit = this.handleSumbit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
+  // take in and update state
   handleChange(event) {
     this.setState({
       [event.target.name]: event.target.value,
     });
   }
 
-  handleSumbit(event) {
-    const  { name, email, password, password_confirmation } = this.state;
-    
-      axios
-        .post(
-          // call flask
-          "http://localhost:5000/api/users/registrations",
-          {
-            user: {
-              name: name,
-              email: email,
-              password: password,
-              password_confirmation: password_confirmation,
-            },
-          }
-        )
-        .then((response) => {
-          // is user logged in?
-          console.log("registration response", response);
-        })
-        .catch((error) => {
-          console.log("registration error", error);
-        });
+  // when the form is submitted for a new user
+  handleSubmit(event) {
+    const { name, email, password, password_confirmation } = this.state;
+
+    axios
+      .post("http://localhost:5000/api/users/registrations", {
+        user: {
+          name: name,
+          email: email,
+          password: password,
+          password_confirmation: password_confirmation,
+        },
+      })
+      .then((response) => {
+        console.log("this is the response");
+        console.log(response);
+        if (response.data.status === "created") {
+          this.props.handleSuccessfulAuth(response.data);
+        }
+      })
+      .catch((error) => {
+        console.log("registration error", error);
+      });
     event.preventDefault();
   }
-
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSumbit}>
+        <form onSubmit={this.handleSubmit}>
           <input
             type="name"
             name="name"
-            placeholder="Name"
+            placeholder="name"
             value={this.state.name}
             onChange={this.handleChange}
             required
           ></input>
+
           <input
             type="email"
             name="email"
