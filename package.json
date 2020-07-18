@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://FreeMonkey19.github.io/v5",
+  "homepage": "https://FreeMonkey19.github.io/application-station",
   "dependencies": {
     "-": "0.0.1",
     "@testing-library/jest-dom": "^4.2.4",
@@ -33,7 +33,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "proxy": "http://localhost:5000",
+  "proxy": "https://FreeMonkey19.github.io/application-station",
   "browserslist": {
     "production": [
       ">0.2%",

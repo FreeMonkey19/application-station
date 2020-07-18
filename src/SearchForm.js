@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 // import SearchDetail from './SearchDetail';
 import './SearchForm.css'
 // before deployment fix proxy to 5000
-const BASE_URL = 'http://localhost:5000/api/job_listings?';
+const BASE_URL = 'https://application-station.herokuapp.com/api/job_listings?';
 const axios = require('axios');
 
 const SearchForm = () => {
@@ -22,7 +22,6 @@ const SearchForm = () => {
 
   };
 
-  // put this is curly brackets at the bottom of page?
   console.log(searchResult)
 
   // show job search details 
