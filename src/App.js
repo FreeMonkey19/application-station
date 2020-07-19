@@ -15,8 +15,6 @@ import {
 } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
-console.log("this is node env")
-console.log(NODE_ENV)
 
 class App extends Component {
   constructor(props) {
@@ -61,6 +59,8 @@ class App extends Component {
         }
       })
       .catch((error) => {
+        console.log("this is node env");
+        console.log(NODE_ENV);
         console.log("check login error", error);
       });
   }
