@@ -27,8 +27,8 @@ export class MainNav extends Component {
           </NavLink>
         </span>
         <span className="nav-link-container" title="main-nav-link">
-          <NavLink className="nav-link" to="/search_results">
-            Search Results
+          <NavLink className="nav-link" to="https://application-station.herokuapp.com/api/search_results">
+            All Listings
           </NavLink>
         </span>
         <span className="nav-link-container" title="main-nav-link">

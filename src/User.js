@@ -5,7 +5,7 @@ import { UserList } from "./UserList";
 function User() {
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    fetch("/api/users").then((response) =>
+    fetch("https://application-station.herokuapp.com/api/users").then((response) =>
       response.json().then((data) => {
         setUsers(data.users);
       })
