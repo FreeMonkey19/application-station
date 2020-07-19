@@ -60,7 +60,7 @@ class App extends Component {
       })
       .catch((error) => {
         console.log("this is node env");
-        console.log(NODE_ENV);
+        console.log(process.env.NODE_ENV);
         console.log("check login error", error);
       });
   }
