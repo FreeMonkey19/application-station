@@ -33,7 +33,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "proxy": "https://FreeMonkey19.github.io/application-station",
+  "proxy": "https://application-station.herokuapp.com/",
   "browserslist": {
     "production": [
       ">0.2%",

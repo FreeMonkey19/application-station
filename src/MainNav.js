@@ -19,7 +19,7 @@ export class MainNav extends Component {
         <span className="nav-link-container" title="main-nav-link">
           <NavLink className="nav-link" to="/logged">
             Logged
-          </NavLink>
+          </NavLink>?
         </span>
         <span className="nav-link-container" title="main-nav-link">
           <NavLink className="nav-link" to="/dashboard">
@@ -27,7 +27,7 @@ export class MainNav extends Component {
           </NavLink>
         </span>
         <span className="nav-link-container" title="main-nav-link">
-          <NavLink className="nav-link" to="https://application-station.herokuapp.com/api/search_results">
+          <NavLink className="nav-link" to="/search_results">
             All Listings
           </NavLink>
         </span>
