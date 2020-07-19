@@ -19,7 +19,7 @@ export class MainNav extends Component {
         <span className="nav-link-container" title="main-nav-link">
           <NavLink className="nav-link" to="/logged">
             Logged
-          </NavLink>?
+          </NavLink>
         </span>
         <span className="nav-link-container" title="main-nav-link">
           <NavLink className="nav-link" to="/dashboard">
