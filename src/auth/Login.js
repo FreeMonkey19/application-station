@@ -27,7 +27,7 @@ export default class Login extends Component {
     axios
       .post(
         // call flask
-        "https://application-station.herokuapp.com/api/users/login",
+        `${process.env.REACT_APP_BACKEND}api/users/login`,
         {
           user: {
             email: email,

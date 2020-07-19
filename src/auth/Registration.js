@@ -29,7 +29,7 @@ export default class Registration extends Component {
     const { name, email, password, password_confirmation } = this.state;
 
     axios
-      .post("https://application-station.herokuapp.com/api/users/registrations", {
+      .post(`${process.env.REACT_APP_BACKEND}api/users/registrations`, {
         user: {
           name: name,
           email: email,

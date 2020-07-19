@@ -5,7 +5,7 @@ import { JobList } from "./JobList";
 function Job() {
   const [jobs, setJobs] = useState([]);
   useEffect(() => {
-    fetch("https://application-station.herokuapp.com/api/job_listings").then((response) =>
+    fetch(`${process.env.REACT_APP_BACKEND}api/job_listings`).then((response) =>
       response.json().then((data) => {
         setJobs(data.jobs);
       })

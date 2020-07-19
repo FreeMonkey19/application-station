@@ -31,7 +31,7 @@ class App extends Component {
 
   checkLoginStatus() {
     axios
-      .get("https://application-station.herokuapp.com/api/users")
+      .get(`${process.env.REACT_APP_BACKEND}api/users`)
       .then((response) => {
         console.log("this is the response");
 

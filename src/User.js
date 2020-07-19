@@ -5,7 +5,9 @@ import { UserList } from "./UserList";
 function User() {
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    fetch("https://application-station.herokuapp.com/api/users").then((response) =>
+    console.log('this is react app  backend var')
+    console.log(process.env.REACT_APP_BACKEND)
+    fetch(`${process.env.REACT_APP_BACKEND}api/users`).then((response) =>
       response.json().then((data) => {
         setUsers(data.users);
       })

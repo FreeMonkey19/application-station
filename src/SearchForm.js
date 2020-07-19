@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 // import SearchDetail from './SearchDetail';
 import './SearchForm.css'
 // before deployment fix proxy to 5000
-const BASE_URL = 'https://application-station.herokuapp.com/api/job_listings?';
+const BASE_URL = `${process.env.REACT_APP_BACKEND}api/job_listings?`;
 const axios = require('axios');
 
 const SearchForm = () => {
