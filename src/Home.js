@@ -26,7 +26,7 @@ export default class Home extends Component {
     // redirect user - Home is defined inside a route. 
     // we have access to .history via Router props in App.js where we render Home.
     // here the user is successfully registered and as soon as that takes place - redirect to dashboard
-    this.props.history.push("/dashboard");
+    this.props.history.push("/home");
   }
 
   handleLogoutClick() {

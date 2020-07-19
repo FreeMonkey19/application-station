@@ -14,7 +14,9 @@ export const JobList = ({ jobs }) => {
               <Card.Description>Location: {job.location}</Card.Description>
 
               <Card.Content extra>
-                <button className="btn btn-primary">Apply</button>
+                <button className="btn btn-primary">Save</button>
+                <button className="btn btn-primary">Reject</button>
+
               </Card.Content>
             </Card.Content>
           </Card>

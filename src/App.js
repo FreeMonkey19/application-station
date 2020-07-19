@@ -3,7 +3,7 @@ import "./App.css";
 import Header from "./Header";
 import Job from "./Job";
 import Sidebar from "./Sidebar";
-import User from "./User";
+// import User from "./User";
 import SearchForm from "./SearchForm";
 import Home from "./Home";
 import Dashboard from "./Dashboard";
@@ -103,41 +103,47 @@ class App extends Component {
               )}
             />
 
-            <Route path="/login">
+            {/* <Route path="/login">
               <div className="logo">
                 <h1>Sign-in form</h1>
               </div>
-            </Route>
-            <Route path="/logged">
+            </Route> */}
+            {/* <Route path="/logged">
               <div className="logo">
                 <h1>If you are here you are logged in. </h1>
-                <SearchForm />
-                <Sidebar />
+              
               </div>
-            </Route>
+            </Route> */}
             <Route
               exact
               path={"/dashboard"}
               render={(props) => (
-                <Dashboard
-                  {...props}
-                  loggedInStatus={this.state.loggedInStatus}
-                />
+                <div>
+                  <h1>Welcome to Application Station</h1>
+                  <Dashboard
+                    {...props}
+                    loggedInStatus={this.state.loggedInStatus}
+                  />
+                   <Job />
+                
+                </div>
               )}
             />
 
-            <Route path="/search_results">
+            <Route path="/home">
               <div className="logo">
-                <h1>All Search results</h1>
-                <Job />
+              <SearchForm />
+                  <Sidebar />
+              
               </div>
             </Route>
-            <Route path="/users">
+            {/* <Route path="/admin">
               <div className="logo">
-                <h1>Hello Users</h1>
+                <h1>Admin Page</h1>
                 <User />
+               
               </div>
-            </Route>
+            </Route> */}
           </Switch>
         </Router>
       </div>
