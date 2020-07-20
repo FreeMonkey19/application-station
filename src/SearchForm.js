@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 // import Job from "./Job";
 // import SearchDetail from './SearchDetail';
 import "./SearchForm.css";
@@ -18,41 +19,16 @@ const SearchForm = () => {
       .get(`${BASE_URL}description=${description}&location=${location}`)
       .then((response) => {
         setResult(response.data);
+        console.log("this is response.data");
+        console.log(response.data);
       });
   };
 
-  // const userSearchResults = searchResult.map((search) => {
-  //   return <h2 key={search.jobs.id}>{search.jobs.title}</h2>
-  // })
-
-
- 
-
-for (var key in searchResult) {
-  if (searchResult.hasOwnProperty(key)) {
-    console.log(key + " -> " + searchResult[key]);
+  const userListings = [];
+  const listingsArray = searchResult["jobs"];
+  for (var key in listingsArray) {
+    userListings.push(listingsArray[key]);
   }
-}
-  
-  console.log("this is search results")
-  console.log(searchResult)
-
-  // userResults.map((search) => {
-  //   return <h2> key={search.id} job={search.title}</h2>
-  // })
-
-  
-
-  // const [searchDetail, setSearchDetail] = useState([]);
-
-  // const onClickDetails = (job) => {
-  //   setSearchDetail(job);
-
-  // }
-
-  // const generateSearches = searchResult.map((search) => {
-  //   return <Job key={search.id} job={search.title} onClickCallBack={onClickDetails} />
-  // })
 
   return (
     <div className="search-params">
@@ -88,6 +64,30 @@ for (var key in searchResult) {
         </label>
         <button>Submit</button>
       </form>
+      <div className="card-parent">
+        {userListings.map((listing) => {
+          return (
+            <div key={listing.id} >
+              <img 
+                src={listing.company_logo}
+                className="card-img-top"
+                alt="..."
+                className="img-thumbnail image-small"
+              ></img>
+              <div className="card-body">
+                <h5 className="card-title">Company: {listing.company}</h5>
+                <h6 className="card-title">Title: {listing.title}</h6>
+                <h6 className="card-title">Location: {listing.title}</h6>
+
+                <button className="btn btn-primary">More Info</button>
+                <button className="btn btn-danger">Delete</button>
+
+
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

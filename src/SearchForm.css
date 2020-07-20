@@ -51,3 +51,26 @@
   .search-params button:focus {
     border: 1px solid cornflowerblue;
   }
+
+  .small-image {
+    /* background-color: red; */
+    margin: 20px;
+    padding-top: 15px;;
+    width: 18rem;
+    border: 2px solid blue;
+
+  }
+
+  .small-image img {
+    background-color: red;
+  }
+
+  .card-parent {
+    background-color: yellow;
+  }
+
+  /* .ex7 .parent {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  } */
