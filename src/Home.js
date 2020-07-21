@@ -20,10 +20,10 @@ export default class Home extends Component {
     //   update parent component with render props
     // handleLogin is in App
     this.props.handleLogin(data);
-    console.log('this is the date')
-    console.log(data)
+    console.log("right here charlotte");
+    console.log(data);
 
-    // redirect user - Home is defined inside a route. 
+    // redirect user - Home is defined inside a route.
     // we have access to .history via Router props in App.js where we render Home.
     // here the user is successfully registered and as soon as that takes place - redirect to dashboard
     this.props.history.push("/home");
@@ -32,24 +32,25 @@ export default class Home extends Component {
   handleLogoutClick() {
     axios
       .delete("/auth/logout")
-      .then(response => {
-          console.log(response)
+      .then((response) => {
+        console.log(response);
         this.props.handleLogout();
       })
-      .catch(error => {
+      .catch((error) => {
         console.log("logout error", error);
       });
+    this.props.history.push("/");
   }
-
 
   render() {
     return (
       <div>
-        <h1>Home</h1>
-        <h1>Status: {this.props.loggedInStatus}</h1>
-        <button onClick={() => this.handleLogoutClick()}>Logout</button>
+        <h1>Login Status: {this.props.loggedInStatus}</h1>
         <Registration handleSuccessfulAuth={this.handleSuccessfulAuth} />
         <Login handleSuccessfulAuth={this.handleSuccessfulAuth} />
+        <div>
+          {/* <button onClick={() => this.handleLogoutClick()}>Logout</button> */}
+        </div>
       </div>
     );
   }

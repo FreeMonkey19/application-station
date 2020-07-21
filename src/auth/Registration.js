@@ -39,10 +39,8 @@ export default class Registration extends Component {
       })
       .then((response) => {
         console.log("this is the response");
-        console.log(response);
-        console.log(response.data.status)
         if (response.status === 201) {
-          console.log('in registration, status is created');
+          console.log("in registration, status is created");
           this.props.handleSuccessfulAuth(response.data);
         }
       })
@@ -53,25 +51,33 @@ export default class Registration extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="centered search-params">
         <form onSubmit={this.handleSubmit}>
-          <input
-            type="name"
-            name="name"
-            placeholder="name"
-            value={this.state.name}
-            onChange={this.handleChange}
-            required
-          ></input>
+        <h3>New to this site?</h3>
+        <h4>Register Here</h4>
 
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={this.state.email}
-            onChange={this.handleChange}
-            required
-          ></input>
+          <label htmlFor="name">
+            Name
+            <input
+              type="text"
+              name="name"
+              placeholder="name"
+              value={this.state.name}
+              onChange={this.handleChange}
+              required
+            ></input>
+          </label>
+          <label htmlFor="email">
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={this.state.email}
+              onChange={this.handleChange}
+              required
+            ></input>
+          </label>
+          <label htmlFor="password">
           <input
             type="password"
             name="password"
@@ -79,15 +85,16 @@ export default class Registration extends Component {
             value={this.state.password}
             onChange={this.handleChange}
             required
-          ></input>
+          ></input></label>
+          <label htmlFor="password">
           <input
-            type="password_confirmation"
+            type="password"
             name="password_confirmation"
             placeholder="Password_confirmation"
             value={this.state.password_confirmation}
             onChange={this.handleChange}
             required
-          ></input>
+          ></input></label>
 
           <button type="submit">Register</button>
         </form>

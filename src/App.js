@@ -2,17 +2,14 @@ import React, { Component } from "react";
 import "./App.css";
 import Header from "./Header";
 import Job from "./Job";
-import Sidebar from "./Sidebar";
-// import User from "./User";
+// import Sidebar from "./Sidebar";
+import User from "./User";
 import SearchForm from "./SearchForm";
 import Home from "./Home";
 import Dashboard from "./Dashboard";
-import {
-  HashRouter as Router,
-  // Redirect,
-  Switch,
-  Route,
-} from "react-router-dom";
+import Registration from "./auth/Registration";
+import Login from "./auth/Login";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 
@@ -87,19 +84,21 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-          <Header />
+        <Header />
           <Switch>
             <Route
               exact
               path={"/"}
               // render={props} gives us all the props of React Router and allows us to add more
               render={(props) => (
-                <Home
-                  {...props}
-                  handleLogin={this.handleLogin}
-                  handleLogout={this.handleLogout}
-                  loggedInStatus={this.state.loggedInStatus}
-                />
+                <div>
+                  <Home
+                    {...props}
+                    handleLogin={this.handleLogin}
+                    handleLogout={this.handleLogout}
+                    loggedInStatus={this.state.loggedInStatus}
+                  />
+                </div>
               )}
             />
 
@@ -108,13 +107,16 @@ class App extends Component {
                 <h1>Sign-in form</h1>
               </div>
             </Route> */}
-            {/* <Route path="/logged">
+            <Route path="/logout">
               <div className="logo">
-                <h1>If you are here you are logged in. </h1>
-              
+                <h1>Thank you for visiting.</h1>
+                <h3>You are successfully logged out.</h3>
+                <Registration />
+                <Login />
               </div>
-            </Route> */}
+            </Route>
             <Route
+            
               exact
               path={"/dashboard"}
               render={(props) => (
@@ -124,26 +126,29 @@ class App extends Component {
                     {...props}
                     loggedInStatus={this.state.loggedInStatus}
                   />
-                   <Job />
-                
                 </div>
               )}
             />
 
             <Route path="/home">
               <div className="logo">
-              <SearchForm />
-                  <Sidebar />
-              
+                <div className="subtitle">
+                  {" "}
+                  <h2>Careers taking off daily!</h2>
+                  <h2>Secure your's today!</h2>
+                </div>
+
+                <SearchForm />
+                {/* <Sidebar /> */}
               </div>
             </Route>
-            {/* <Route path="/admin">
+            <Route path="/admin">
               <div className="logo">
                 <h1>Admin Page</h1>
                 <User />
-               
+                <Job />
               </div>
-            </Route> */}
+            </Route>
           </Switch>
         </Router>
       </div>

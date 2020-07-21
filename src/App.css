@@ -20,3 +20,11 @@
   margin-left: 10px;
 }
 
+.subtitle {
+  /* background-color: red; */
+  text-align: center;
+}
+
+.subtitle h2 {
+  font-weight: bolder;
+}

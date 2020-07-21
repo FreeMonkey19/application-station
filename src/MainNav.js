@@ -31,11 +31,11 @@ export class MainNav extends Component {
             Home Page
           </NavLink>
         </span>
-        {/* <span className="nav-link-container" title="main-nav-link">
-          <NavLink className="nav-link" to="/admin">
-            Admin Page
+        <span className="nav-link-container" title="main-nav-link">
+          <NavLink className="nav-link" to="/logout">
+            Logout
           </NavLink>
-        </span> */}
+        </span>
       </nav>
 
     );
