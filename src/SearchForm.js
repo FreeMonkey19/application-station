@@ -15,6 +15,7 @@ const SearchForm = () => {
 
   const onSubmit = (event) => {
     event.preventDefault();
+    event.target.reset();
     axios
       .get(`${BASE_URL}description=${description}&location=${location}`)
       .then((response) => {
@@ -46,6 +47,8 @@ const SearchForm = () => {
               <option>Seattle</option>
               <option>Portland</option>
               <option>San Francisco</option>
+              <option>Remote</option>
+
             </select>
           </label>
           <label htmlFor="description">
@@ -60,13 +63,16 @@ const SearchForm = () => {
               <option>Python</option>
               <option>Javascript</option>
               <option>React</option>
-              <option>Ruby on Rails</option>
+              <option>Engineering</option>
             </select>
           </label>
           <button>Submit</button>
+          
+
         </form>
+        
+
       </div>
-      <div className="homepage-image">Image goes here</div>
       <div className="outer-div">
         {userListings.map((listing) => {
           return (
@@ -85,11 +91,9 @@ const SearchForm = () => {
 
                 <div className="card-footer">
                   <button className="btn btn-primary btn-small save-button">
-                    <h5>Save</h5>
+                    <h5>Save To Dashboard</h5>
                   </button>
-                  <button className="btn btn-primary btn-small delete-button">
-                    <h5>Delete</h5>
-                  </button>
+                
                 </div>
               </div>
             </div>

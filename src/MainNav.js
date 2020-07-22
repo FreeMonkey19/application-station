@@ -16,11 +16,11 @@ export class MainNav extends Component {
             Login
           </NavLink>
         </span> */}
-        {/* <span className="nav-link-container" title="main-nav-link">
-          <NavLink className="nav-link" to="/logged">
-            Logged
+        <span className="nav-link-container" title="main-nav-link">
+          <NavLink className="nav-link" to="/admin">
+            Admin
           </NavLink>
-        </span> */}
+        </span>
         <span className="nav-link-container" title="main-nav-link">
           <NavLink className="nav-link" to="/dashboard">
             Dashboard

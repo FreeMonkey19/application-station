@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Header from "./Header";
 import Job from "./Job";
-// import Sidebar from "./Sidebar";
+import Sidebar from "./Sidebar";
 import User from "./User";
 import SearchForm from "./SearchForm";
 import Home from "./Home";
@@ -84,7 +84,7 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-        <Header />
+          <Header />
           <Switch>
             <Route
               exact
@@ -116,16 +116,19 @@ class App extends Component {
               </div>
             </Route>
             <Route
-            
               exact
               path={"/dashboard"}
               render={(props) => (
+                <div>
                 <div>
                   <h1>Welcome to Application Station</h1>
                   <Dashboard
                     {...props}
                     loggedInStatus={this.state.loggedInStatus}
                   />
+                
+                </div>
+                <div>  {<Sidebar /> }</div>
                 </div>
               )}
             />
@@ -135,18 +138,20 @@ class App extends Component {
                 <div className="subtitle">
                   {" "}
                   <h2>Careers taking off daily!</h2>
-                  <h2>Secure your's today!</h2>
+                  <h2>Reserve your's today!</h2>
                 </div>
 
                 <SearchForm />
-                {/* <Sidebar /> */}
               </div>
             </Route>
             <Route path="/admin">
               <div className="logo">
-                <h1>Admin Page</h1>
-                <User />
-                <Job />
+                <div>
+                  <h2>User Data</h2>
+                  <User />
+                  <h2>Job Data</h2>
+                  <Job />
+                </div>
               </div>
             </Route>
           </Switch>

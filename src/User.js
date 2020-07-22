@@ -15,7 +15,6 @@ function User() {
   }, []);
 
   console.log(users);
-
   return (
     <div className="User">
       <UserList users={users} />

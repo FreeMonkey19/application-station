@@ -49,7 +49,7 @@ export default class Home extends Component {
         <Registration handleSuccessfulAuth={this.handleSuccessfulAuth} />
         <Login handleSuccessfulAuth={this.handleSuccessfulAuth} />
         <div>
-          {/* <button onClick={() => this.handleLogoutClick()}>Logout</button> */}
+          <button onClick={() => this.handleLogoutClick()}>Logout</button>
         </div>
       </div>
     );

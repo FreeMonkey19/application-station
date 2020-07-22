@@ -15,7 +15,7 @@ function Job() {
   console.log(jobs)
 
   return (
-    <div className="Job">
+    <div className="job">
       <JobList jobs={jobs} />
     </div>
   );
