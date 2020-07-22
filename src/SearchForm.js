@@ -48,7 +48,6 @@ const SearchForm = () => {
               <option>Portland</option>
               <option>San Francisco</option>
               <option>Remote</option>
-
             </select>
           </label>
           <label htmlFor="description">
@@ -67,11 +66,7 @@ const SearchForm = () => {
             </select>
           </label>
           <button>Submit</button>
-          
-
         </form>
-        
-
       </div>
       <div className="outer-div">
         {userListings.map((listing) => {
@@ -80,22 +75,26 @@ const SearchForm = () => {
               <img
                 className="listing-image"
                 src={listing.company_logo}
-                // className="card-img-top image-small"
                 alt="..."
               ></img>
-              <div className="card-body">
-                <h5 className="card-title">Company: {listing.company}</h5>
-                <h6 className="card-title">Title: {listing.title}</h6>
-                <h6 className="card-title">Location: {listing.location}</h6>
-                <h6 className="card-title">Date Created: July 23, 2020</h6>
 
-                <div className="card-footer">
-                  <button className="btn btn-primary btn-small save-button">
-                    <h5>Save To Dashboard</h5>
-                  </button>
-                
-                </div>
-              </div>
+              <h5 className="card-title">
+                <a
+                  href={listing.company_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  More Info
+                </a>
+              </h5>
+              <h6 className="card-title">Title: {listing.title}</h6>
+              <h6 className="card-title">Location: {listing.location}</h6>
+              <h6 className="card-title">Date Created: July 23, 2020</h6>
+              {/* <div className="card-footer">
+                <button className="btn btn-primary btn-small save-button">
+                  <h5>Save To Dashboard</h5>
+                </button>
+              </div> */}
             </div>
           );
         })}
