@@ -12,6 +12,7 @@ import Login from "./auth/Login";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
+console.log("hello");
 
 class App extends Component {
   constructor(props) {
