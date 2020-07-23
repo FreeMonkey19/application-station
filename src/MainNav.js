@@ -8,7 +8,7 @@ export class MainNav extends Component {
       <nav className="main-nav" title="main-nav-bar">
         {/* <span className="nav-link-container" title="main-nav-link">
           <NavLink className="nav-link" to="/" exact>
-            Home
+            
           </NavLink>
         </span> */}
         {/* <span className="nav-link-container move-right" title="main-nav-link">
@@ -16,28 +16,29 @@ export class MainNav extends Component {
             Login
           </NavLink>
         </span> */}
-        <span className="nav-link-container" title="main-nav-link">
+        {/* <span className="nav-link-container" title="main-nav-link">
           <NavLink className="nav-link" to="/admin">
             Admin
           </NavLink>
-        </span>
-        <span className="nav-link-container" title="main-nav-link">
-          <NavLink className="nav-link" to="/dashboard">
-            Dashboard
-          </NavLink>
-        </span>
+        </span> */}
+
         <span className="nav-link-container" title="main-nav-link">
           <NavLink className="nav-link" to="/home">
-            Home Page
+            Home
           </NavLink>
         </span>
+        <span className="nav-link-container" title="main-nav-link">
+          <NavLink className="nav-link" to="/all_listings">
+            All Listings
+          </NavLink>
+        </span>
+
         <span className="nav-link-container" title="main-nav-link">
           <NavLink className="nav-link" to="/logout">
             Logout
           </NavLink>
         </span>
       </nav>
-
     );
   }
 }

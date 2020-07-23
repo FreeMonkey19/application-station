@@ -8,8 +8,8 @@ const BASE_URL = `${process.env.REACT_APP_BACKEND}api/job_listings?`;
 const axios = require("axios");
 
 const SearchForm = () => {
-  const [location, setLocation] = useState("Seattle, WA");
-  const [description, setDescription] = useState("Python");
+  const [location, setLocation] = useState("");
+  const [description, setDescription] = useState("");
   // const [submission, setSubmission] = useState("");
   const [searchResult, setResult] = useState([]);
 
@@ -17,7 +17,7 @@ const SearchForm = () => {
     event.preventDefault();
     event.target.reset();
     axios
-      .get(`${BASE_URL}description=${description}&location=${location}`)
+      .get(`${BASE_URL}description=${description}&location=${location}&page=4`)
       .then((response) => {
         setResult(response.data);
         console.log("this is response.data");
@@ -44,10 +44,11 @@ const SearchForm = () => {
               onChange={(event) => setLocation(event.target.value)}
               onBlur={(event) => setLocation(event.target.value)}
             >
-              <option>Seattle</option>
               <option>Portland</option>
               <option>San Francisco</option>
+              <option>Seattle</option>
               <option>Remote</option>
+              <option>Vancouver</option>
             </select>
           </label>
           <label htmlFor="description">
@@ -83,6 +84,7 @@ const SearchForm = () => {
                   href={listing.company_url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  placeholder="No logo available"
                 >
                   More Info
                 </a>

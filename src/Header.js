@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { MainNav } from "./MainNav";
 import "./Header.css";
 
 export class Header extends Component {
@@ -16,7 +15,7 @@ export class Header extends Component {
             </h2>
           </div>
         </div>
-        <MainNav />
+        {/* <MainNav /> */}
       </header>
     );
   }
