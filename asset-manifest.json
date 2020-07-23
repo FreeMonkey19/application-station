@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/application-station/static/css/main.882c2d52.chunk.css",
-    "main.js": "/application-station/static/js/main.de353be0.chunk.js",
-    "main.js.map": "/application-station/static/js/main.de353be0.chunk.js.map",
+    "main.css": "/application-station/static/css/main.cf50d56e.chunk.css",
+    "main.js": "/application-station/static/js/main.05763d1e.chunk.js",
+    "main.js.map": "/application-station/static/js/main.05763d1e.chunk.js.map",
     "runtime-main.js": "/application-station/static/js/runtime-main.73d7e652.js",
     "runtime-main.js.map": "/application-station/static/js/runtime-main.73d7e652.js.map",
     "static/css/2.f4b63e1e.chunk.css": "/application-station/static/css/2.f4b63e1e.chunk.css",
-    "static/js/2.b40dfe22.chunk.js": "/application-station/static/js/2.b40dfe22.chunk.js",
-    "static/js/2.b40dfe22.chunk.js.map": "/application-station/static/js/2.b40dfe22.chunk.js.map",
+    "static/js/2.974414d1.chunk.js": "/application-station/static/js/2.974414d1.chunk.js",
+    "static/js/2.974414d1.chunk.js.map": "/application-station/static/js/2.974414d1.chunk.js.map",
     "index.html": "/application-station/index.html",
-    "precache-manifest.5bbf2f7907411dd696972a6fa49bf673.js": "/application-station/precache-manifest.5bbf2f7907411dd696972a6fa49bf673.js",
+    "precache-manifest.4cf63d2f1080ac205ed71925f32bd185.js": "/application-station/precache-manifest.4cf63d2f1080ac205ed71925f32bd185.js",
     "service-worker.js": "/application-station/service-worker.js",
     "static/css/2.f4b63e1e.chunk.css.map": "/application-station/static/css/2.f4b63e1e.chunk.css.map",
-    "static/css/main.882c2d52.chunk.css.map": "/application-station/static/css/main.882c2d52.chunk.css.map",
-    "static/js/2.b40dfe22.chunk.js.LICENSE.txt": "/application-station/static/js/2.b40dfe22.chunk.js.LICENSE.txt",
+    "static/css/main.cf50d56e.chunk.css.map": "/application-station/static/css/main.cf50d56e.chunk.css.map",
+    "static/js/2.974414d1.chunk.js.LICENSE.txt": "/application-station/static/js/2.974414d1.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/application-station/static/media/outline-icons.ef60a4f6.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.73d7e652.js",
     "static/css/2.f4b63e1e.chunk.css",
-    "static/js/2.b40dfe22.chunk.js",
-    "static/css/main.882c2d52.chunk.css",
-    "static/js/main.de353be0.chunk.js"
+    "static/js/2.974414d1.chunk.js",
+    "static/css/main.cf50d56e.chunk.css",
+    "static/js/main.05763d1e.chunk.js"
   ]
 }
