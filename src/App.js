@@ -110,7 +110,7 @@ class App extends Component {
             </Route>
             <Route path="/logout">
               <div className="logo">
-                <div className="subtitle">
+                <div className="left">
                   <h1>Thank you for visiting.</h1>
                   <h3>You are successfully logged out.</h3>
                 </div>

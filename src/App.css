@@ -27,3 +27,7 @@
 .subtitle h2 {
   font-weight: bolder;
 }
+
+.left {
+  text-align: left;
+}
