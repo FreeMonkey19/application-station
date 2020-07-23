@@ -10,12 +10,9 @@ export class Header extends Component {
             <h1 className="title">Application Station:</h1>
           </div>
           <div className="page-subtitle">
-            <h2 className="header-subtitle">
-              Your Search Stops Here!.
-            </h2>
+            <h2 className="header-subtitle">Your Search Stops Here!</h2>
           </div>
         </div>
-        {/* <MainNav /> */}
       </header>
     );
   }

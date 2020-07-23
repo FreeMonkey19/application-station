@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-// import "./Login.css";
 
 export default class Login extends Component {
   constructor(props) {
@@ -37,7 +36,6 @@ export default class Login extends Component {
         }
       )
       .then((response) => {
-        console.log("this is it charlotte");
         console.log("from login", response);
         if (response.status === 200) {
           this.props.handleSuccessfulAuth(response.data);

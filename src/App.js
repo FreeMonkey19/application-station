@@ -1,17 +1,15 @@
 import React, { Component } from "react";
-import "./App.css";
-import Header from "./Header";
-import Job from "./Job";
-// import Sidebar from "./Sidebar";
-import { MainNav } from "./MainNav";
-
-// import User from "./User";
-import SearchForm from "./SearchForm";
-import Home from "./Home";
-// import Dashboard from "./Dashboard";
-// import Registration from "./auth/Registration";
-// import Login from "./auth/Login";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
+
+import "./App.css";
+import Header from "./components/Header";
+import MainNav from "./MainNav";
+import Registration from "./auth/Registration";
+import Login from "./auth/Login";
+import Job from "./components/Job";
+import SearchForm from "./SearchForm";
+import Home from "./components/Home";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 
@@ -58,8 +56,6 @@ class App extends Component {
         }
       })
       .catch((error) => {
-        console.log("this is node env");
-        console.log(process.env.NODE_ENV);
         console.log("check login error", error);
       });
   }
@@ -73,7 +69,6 @@ class App extends Component {
       user: {},
     });
   }
-  // this is also in Home
   handleLogin(data) {
     this.setState({
       loggedInStatus: "LOGGED_IN",
@@ -93,7 +88,6 @@ class App extends Component {
               // render={props} gives us all the props of React Router and allows us to add more
               render={(props) => (
                 <div>
-                  {/* Home has Registration and Login forms */}
                   <Home
                     {...props}
                     handleLogin={this.handleLogin}
@@ -103,7 +97,6 @@ class App extends Component {
                 </div>
               )}
             />
-
             <Route path="/home">
               <MainNav />
               <div className="logo">
@@ -112,48 +105,29 @@ class App extends Component {
                   <h2>Careers taking off daily!</h2>
                   <h2>Reserve yours today!</h2>
                 </div>
-
                 <SearchForm />
               </div>
             </Route>
-
-            {/* <Route path="/login">
-              <div className="logo">
-                <h1>Sign-in form</h1>
-              </div>
-            </Route> */}
             <Route path="/logout">
-              <h2>You are successfully logged out!</h2>
-              {/* <div className="logo">
-                <h1>Thank you for visiting.</h1>
-                <h3>You are successfully logged out.</h3>
+              <div className="logo">
+                <div className="subtitle">
+                  <h1>Thank you for visiting.</h1>
+                  <h3>You are successfully logged out.</h3>
+                </div>
                 <Registration />
                 <Login />
-              </div> */}
+              </div>
             </Route>
-            <Route
-              exact
-              path={"/all_listings"}
-              render={(props) => (
-                <div>
-                  {" "}
-                  <div>
-                    {/* <h1 className="shadow">Welcome to Application Station</h1> */}
-                    <MainNav />
-
-                    <Job
-                      {...props}
-                      loggedInStatus={this.state.loggedInStatus}
-                    />
-                  </div>
-                </div>
-              )}
-            />
+            <Route path="/all_listings">
+              <div className="logo">
+                <MainNav />
+                <Job />
+              </div>
+            </Route>
           </Switch>
         </Router>
       </div>
     );
   }
 }
-
 export default App;
