@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/application-station/static/css/main.ae14fe47.chunk.css",
+    "main.css": "/application-station/static/css/main.9ad40ee0.chunk.css",
     "main.js": "/application-station/static/js/main.321d4962.chunk.js",
     "main.js.map": "/application-station/static/js/main.321d4962.chunk.js.map",
     "runtime-main.js": "/application-station/static/js/runtime-main.73d7e652.js",
@@ -9,10 +9,10 @@
     "static/js/2.b770ebf2.chunk.js": "/application-station/static/js/2.b770ebf2.chunk.js",
     "static/js/2.b770ebf2.chunk.js.map": "/application-station/static/js/2.b770ebf2.chunk.js.map",
     "index.html": "/application-station/index.html",
-    "precache-manifest.8bb239ebba9a1d73ebfbbecb33226e89.js": "/application-station/precache-manifest.8bb239ebba9a1d73ebfbbecb33226e89.js",
+    "precache-manifest.6341e79d8994b47053525f5812cb53cc.js": "/application-station/precache-manifest.6341e79d8994b47053525f5812cb53cc.js",
     "service-worker.js": "/application-station/service-worker.js",
     "static/css/2.f4b63e1e.chunk.css.map": "/application-station/static/css/2.f4b63e1e.chunk.css.map",
-    "static/css/main.ae14fe47.chunk.css.map": "/application-station/static/css/main.ae14fe47.chunk.css.map",
+    "static/css/main.9ad40ee0.chunk.css.map": "/application-station/static/css/main.9ad40ee0.chunk.css.map",
     "static/js/2.b770ebf2.chunk.js.LICENSE.txt": "/application-station/static/js/2.b770ebf2.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/application-station/static/media/outline-icons.ef60a4f6.woff"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.73d7e652.js",
     "static/css/2.f4b63e1e.chunk.css",
     "static/js/2.b770ebf2.chunk.js",
-    "static/css/main.ae14fe47.chunk.css",
+    "static/css/main.9ad40ee0.chunk.css",
     "static/js/main.321d4962.chunk.js"
   ]
 }
