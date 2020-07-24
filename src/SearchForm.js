@@ -106,7 +106,7 @@ const SearchForm = () => {
               <div className="card-footer">
               <h6 className="card-title">Title: {listing.title}</h6>
               <h6 className="card-title">Location: {listing.location}</h6>
-              <h6 className="card-title">Date Created: July 23, 2020</h6>
+              <h6 className="card-title">Date Created: {listing.date_created}</h6>
                
               </div>
             </div>
